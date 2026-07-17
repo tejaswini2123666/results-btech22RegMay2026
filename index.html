@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Results</title>
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: white;
+}
+.box {
+    border: 1px solid #ddd;
+    padding: 12px;
+    width: 70%;
+    margin: 20px auto;
+}
+.year {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+.result-title {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 70%;
+    margin: auto;
+    color: rgba(19, 164, 236, 0.842);
+    font-size: 16px;
+    font-weight: bold;
+}
+input {
+    height: 25px;
+    width: 170px;
+}
+button {
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#result {
+    margin-top: 30px;
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <img src="logo.jpg" width="550" height="100" alt="College Logo">
+<div class="box">
+<div class="year">
+Academic Year 2024-28
+</div>
+</div>
+<div class="result-title">
+Results for II B.Tech II Semester Regular/Supply Examinations May, 2026
+</div>
+<br><br>
+<b>
+Enter Hall Ticket Number :
+</b>
+<input type="text" id="ht" placeholder="hallticket no.">
+<button onclick="searchResult()">Search</button>
+<br><br><br>
+<div id="result"></div>
+<br>
+<button onclick="window.print()">
+Print Result
+</button>
+<script>
+function searchResult(){
+let htno=document.getElementById("ht").value;
+if(htno==""){
+document.getElementById("result").innerHTML=
+"😅 Please enter Hall Ticket Number";
+}
+else{
+document.getElementById("result").innerHTML=
+"Invalid Hall Ticket Number";
+}
+}
+</script>
+<br><br>
+<div style="
+border:1px solid #ddd;
+padding:10px;
+text-align:left;
+color:green;
+font-weight:bold;
+font-size:16px;
+">
+Last date for Revaluation: 27-07-2026
+</div>
+</body>
+</html>
